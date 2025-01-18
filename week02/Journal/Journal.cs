@@ -4,7 +4,6 @@ using System.IO;
 
 public class Journal
 {
-    
     public List<Entry> _enteries;
     
     public void AddToJournal(Entry newEntry)
