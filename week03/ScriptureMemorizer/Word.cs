@@ -1,19 +1,21 @@
 
-class World
+class Word
 {
     private string _text;
     private bool _isHidden;
-    public void Word(string text)
-    {
-
+    public void WordInList(string text)
+    {  
+        _text = text;
     }
-    public void Hide()
+    public string Hide()
     {
-
+        // c = char
+        string underScore = string.Concat(_text.Select(c => char.IsLetter(c) ? "_" : (char.IsDigit(c) || ",:.':".Contains(c) ? c.ToString() : " ")));
+        return underScore;
     }
-    public void Show()
+    public void Show(string originalText)
     {
-
+        
     }
     public bool IsHidden()
     {
@@ -21,7 +23,7 @@ class World
         return placholder;
     }
     public string GetDisplayText()
-    {
+    {   
         return null;
     }
 }
