@@ -25,10 +25,7 @@ class Reference
                 Console.Clear();
                 Console.WriteLine("Select a valid option.");  
             }
-            else 
-            {
-                Console.Clear();
-            }  
+            
         }
         return soulution;
     }

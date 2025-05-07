@@ -30,6 +30,7 @@ class Program
             Console.WriteLine("What is the verse number?");
             int verse = int.Parse(Console.ReadLine());
             Console.WriteLine("Copy the scripture from the church's web site with 'Ctrl + C'\nThen past it into the console with'Ctrl + Shift + V'\n");
+            Console.WriteLine();
             Console.WriteLine("What is the entier content of the verse?");
             text = Console.ReadLine();
             reference.SingleReference(book, chapter, verse);
@@ -45,28 +46,15 @@ class Program
 
         scriptures.Scripture(reference, GetInfo(reference));
         
-        int numberToHide;
-        do
-        {
-            Console.WriteLine("How many numbers would you like to hide every loop?");
-            string hideAmount = Console.ReadLine();
-            if (int.TryParse(hideAmount, out numberToHide))
-            {
-                break;
-            }
-            else
-            {
-                Console.WriteLine("Use a valid Number");
-            }
-        } while (true);
+        int numberToHide = 1;
         
         string on = "";
         while (on != "Quit")
         {   
             Console.Clear();
 
-            reference.GetDisplayText();
-            scriptures.GetDisplayText();
+            Console.WriteLine(reference.GetDisplayText());
+            Console.WriteLine(scriptures.GetDisplayText());
 
             scriptures.HideRandomeWords(numberToHide);
 

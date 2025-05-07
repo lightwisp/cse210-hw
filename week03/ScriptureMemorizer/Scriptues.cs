@@ -42,6 +42,7 @@ class Scriptures
     }
     public bool IsCompletelyHidden()
     {
+        //make this for the next step. must recognize when all words are hidden and then go to the next step.
         bool placholder = false;
         return placholder;
     }
